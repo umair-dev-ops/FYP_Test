@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+   
+    <title>Hello, world!</title>
+    <style>
+        .top-50
+        {
+            top: 45% !important;
+        }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+    <h1>Hello, world!</h1>
+    <div class="positon-relative">
+    
+        <div class="form position-absolute top-50 start-50 translate-middle" style="width:550px ;;border-radius: 10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            
+            
+            <div id="part-1" style="padding:30px">
+              <h4>Are you?</h4>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Internee 
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Fresher
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Experienced
+                </label>
+              </div>
+
+              <h4 style="margin-top: 30px;">Where do you want to work?</h4>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Anywhere 
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Remote
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Office
+                  </label>
+                </div>
+              <button id="btn-1" type="button" class="btn btn-primary" style="margin-top: 30px;">Primary</button>
+              </div>
+              
+              <!--part2-->
+              <div id="part-2" style="padding:30px;display: none;">
+                <p>Let's set your minimum technical profile in two more simple questions</p>
+                <h4>Which roles fit you?</h4>
+                <div class="" role="group" aria-label="Basic checkbox toggle button group">
+                  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+                
+                  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+                
+                  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+                </div>
+                <button id="btn-2" type="button" class="btn btn-primary" style="margin-top: 30px;">Primary</button>
+              
+                
+
+                  <!-- Modal -->
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+
+                 <!--part3-->
+              <div id="part-3" style="padding:30px;display: none;">
+                <p>What are your top skills?</p>
+                <h4>From 2 to 10</h4>
+                
+                <div id="selected">
+
+                </div>
+                
+
+                <hr>
+                <div class="" role="group" aria-label="Basic checkbox toggle button group">
+                  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                  <label id="" class="btn btn-outline-dark" for="btncheck1">Checkbox 1</label>
+                
+                  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                  <label class="btn btn-outline-dark" for="btncheck2">Checkbox 2</label>
+                
+                  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+                    <div id="set">
+                  <button id="htm" type="checkbox" class="btn btn-primary">Html</button>
+                  </div>
+                </div>
+                <button id="btn-3" type="button" class="btn btn-primary" style="margin-top: 30px;">Primary</button>
+              
+
+  
+
+             
+        </div>
+        <!--part 4-->
+        <div id="part-4" style="padding:30px;display: none;">
+          <p>Let's set your minimum technical profile in two more simple questions</p>
+          <h4>Which roles fit you?</h4>
+          <label for="customRange1" class="form-label">Example range</label>
+
+          <div id="slider_count">Slider Value = <span id="sliderStatus">0</span></div>
+            <br/>
+          <input type="range" class="form-range" min="10000" max="100000" step="10000" id="customRange">
+          <button id="btn-4" type="button" class="btn btn-primary" style="margin-top: 30px;">Primary</button>
+        </div>
+
+          <!--part 5-->
+          <div id="part-5" style="padding:30px;display: none;">
+            <p>Last Step :)</p>
+            <h4>you will be anonymous for companies</h4>
+            <div class="mb-3">
+              <label for="exampleFormControlInput0" class="form-label">Name</label>
+              <input type="text" class="form-control" id="exampleFormControlInput0" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput2" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleFormControlInput2">
+            </div>
+            <div class="mb-3">
+             
+              <button type="submit" class="btn btn-primary mb-3">Sign Up</button>
+            </div>
+          </div>
+  
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    
+    <script>
+  
+
+    $(document).ready(function(){
+      $("#btn-1").click(function(){
+        $("#part-1").hide();
+        $("#part-2").show();
+      });
+      $("#btn-2").click(function(){
+        $("#part-2").hide();
+        $("#part-3").show();
+      });
+      $("#btn-3").click(function(){
+        $("#part-3").hide();
+        $("#part-4").show();
+      });
+      $("#btn-4").click(function(){
+        $("#part-4").hide();
+        $("#part-5").show();
+      });
+      let Tog=true;
+      $("#htm").click(function(){
+        console.log("hello");
+        if(Tog==true)
+        {
+          $("#htm").appendTo("#selected");
+          Tog=false;
+        }
+        else
+        {
+          $("#htm").appendTo("#set");
+          Tog=true;
+        }
+        
+      });
+      $("#customRange").click(function(){
+        $("#sliderStatus").html( $("#customRange").val() );
+      });
+
+   
+      // $(".btn").click(function(){
+      //         $("#myModal").modal('show').modal('focus');
+              
+      //         console.log("chal raha");
+      //     });
+     
+     
+    });
+
+   
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+    </div>
+  </body>
+</html>
