@@ -14,6 +14,10 @@
         {
             top: 45% !important;
         }
+        .start-50
+        {
+          left: 33% !important;
+        }
     </style>
   </head>
   <body>
@@ -23,101 +27,122 @@
 
     <div class="positon-relative">
 
-        <div class="form position-absolute top-50 start-50 translate-middle" style="width:550px ;;border-radius: 10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <div class="form position-absolute top-25 start-50" style="width:550px ;;border-radius: 10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
-
+            <!--Part1-->
             <div id="part-1" style="padding:30px">
               <h4>Are you?</h4>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="internee">
+                <label class="form-check-label" for="flexRadioDefault">
                   Internee
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                <label class="form-check-label" for="flexRadioDefault2">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="fresher">
+                <label class="form-check-label" for="flexRadioDefault">
                   Fresher
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                <label class="form-check-label" for="flexRadioDefault2">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="experienced">
+                <label class="form-check-label" for="flexRadioDefault">
                   Experienced
                 </label>
+              </div>
+              <br>
+              <div id="criteria" style="display: none;">
+              <div class="mb-3">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+  
+              </div>
+              <div class="mb-3">
+                <input class="form-control" type="file" name="" id="">
+  
+              </div>
               </div>
 
               <h4 style="margin-top: 30px;">Where do you want to work?</h4>
               <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault4" value="anywhere">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Anywhere
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                  <label class="form-check-label" for="flexRadioDefault2">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault5" value="remote">
+                  <label class="form-check-label" for="flexRadioDefault1">
                     Remote
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                  <label class="form-check-label" for="flexRadioDefault2">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault6" value="office">
+                  <label class="form-check-label" for="flexRadioDefault1">
                     Office
                   </label>
                 </div>
+
+                
               <button id="btn-1" type="button" class="btn btn-primary" style="margin-top: 30px;">Primary</button>
               </div>
 
               <!--part2-->
-              <div id="part-2" style="padding:30px;display: none;">
-                <p>Let's set your minimum technical profile in two more simple questions</p>
-                <h4>Which roles fit you?</h4>
-                <div class="" role="group" aria-label="Basic checkbox toggle button group">
-                  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+     <div id="part-2" style="padding:30px;display: none;">
+      <p>Let's set your minimum technical profile in two more simple questions</p>
+      <h4>Which roles fit you?</h4>
+      <div class="" role="group" aria-label="Basic checkbox toggle button group">
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck1" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1<span id="btncheck1d"></span></label>
 
-                  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck2" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2<span id="btncheck2d"></span></label>
 
-                  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
-                </div>
-                <button id="btn-2" type="button" class="btn btn-primary" style="margin-top: 30px;">Primary</button>
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck3" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3<span id="btncheck3d"></span></label>
+      </div>
+      <button id="btn-2" type="button" class="btn btn-primary" style="margin-top: 30px;">Primary</button>
 
 
 
-                  <!-- Modal -->
-                  <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
-                  </button>
+      
 
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          ...
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <label for="customRange1" class="form-label">Example range</label>
 
-                </div>
+                <div id="slider_count">Slider Value = <span id="sliderStatus">0</span></div>
+                  <br/>
+                <input type="range" class="form-range" min="10000" max="100000" step="10000" id="customRange">
+              </div>
+              <div class="modal-footer">
+
+                <button id="add" type="button" class="btn btn-primary" data-bs-dismiss="modal">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
 
                  <!--part3-->
               <div id="part-3" style="padding:30px;display: none;">
                 <p>What are your top skills?</p>
                 <h4>From 2 to 10</h4>
+
+                <div id="skillShowHide">
 
                 <div id="selected">
 
@@ -125,20 +150,62 @@
 
 
                 <hr>
-                <div class="" role="group" aria-label="Basic checkbox toggle button group">
-                  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                  <label id="" class="btn btn-outline-dark" for="btncheck1">Checkbox 1</label>
 
-                  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                  <label class="btn btn-outline-dark" for="btncheck2">Checkbox 2</label>
-
-                  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
-                    <div id="set">
-                  <button id="htm" type="checkbox" class="btn btn-primary">Html</button>
+                <div id="set">
+                  <!--testing
+                  <div class="" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheckaa" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheckaa">Checkbox 1</label>
                   </div>
+
+                  tesing-->
+
+
+                  <button id="html" name="hehe" type="checkbox" onclick="changePos(this.id)" class="btn btn-outline-primary">HTML</button>
+                  <button id="css" type="checkbox" onclick="changePos(this.id)" class="btn btn-outline-primary">CSS</button>
+                  <button id="C" type="checkbox" onclick="changePos(this.id)" class="btn btn-outline-primary">C++</button>
                 </div>
-                <button id="btn-3" type="button" class="btn btn-primary" style="margin-top: 30px;">Primary</button>
+                </div>
+
+
+                
+        
+
+             <div id="recommendations" style="display: none;"> 
+            <div class="mb-3">
+              <label for="exampleFormControlInput4" class="form-label">Enter Email address for recommendations</label>
+              <input type="email" class="form-control" id="exampleFormControlInput4" placeholder="name@example.com">
+              
+            </div>
+
+            <div class="mb-3" id="email-2" style="display: none;">
+              <label for="exampleFormControlInput5" class="form-label">Enter 2nd Email address for recommendations</label>
+              <input type="email" class="form-control" id="exampleFormControlInput5" placeholder="name@example.com">
+              
+            </div>
+            <div class="mb-3" id="email-3" style="display: none;">
+              <label for="exampleFormControlInput6" class="form-label">Enter 2nd Email address for recommendations</label>
+              <input type="email" class="form-control" id="exampleFormControlInput6" placeholder="name@example.com">
+              
+            </div>
+            <button id="add-email" >Add</button>
+            </div>
+            <br>
+            <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <ul id="myUL" style="display: none;">
+              <li id="r" onclick="changePos(this.id)"><a  type="checkbox" onclick="changePos(this.id)" class="btn btn-outline-primary">R</a></li>
+              <li><a href="#">Agnes</a></li>
+            
+              <li><a href="#">Billy</a></li>
+              <li><a href="#">Bob</a></li>
+            
+              <li><a href="#">Calvin</a></li>
+              <li><a href="#">Christina</a></li>
+              <li><a href="#">Cindy</a></li>
+            </ul>   
+            <br>
+                <button id="btn-3" type="button" class="btn btn-primary" style="margin-top: 30px;" disabled>Primary</button>
+                <button id="btn-rec" type="button" class="btn btn-primary" style="margin-top: 30px;">Ask for Recommendations</button>
 
 
 
@@ -151,9 +218,9 @@
           <h4>Which roles fit you?</h4>
           <label for="customRange1" class="form-label">Example range</label>
 
-          <div id="slider_count">Slider Value = <span id="sliderStatus">0</span></div>
+          <div id="slider_count">Slider Value = <span id="sliderStatus1">0</span></div>
             <br/>
-          <input type="range" class="form-range" min="10000" max="100000" step="10000" id="customRange">
+          <input type="range" class="form-range" min="10000" max="100000" step="10000" id="customRange1">
           <button id="btn-4" type="button" class="btn btn-primary" style="margin-top: 30px;">Primary</button>
         </div>
 
@@ -173,22 +240,32 @@
               <label for="exampleFormControlInput2" class="form-label">Password</label>
               <input type="password" class="form-control" id="exampleFormControlInput2">
             </div>
+           
             <div class="mb-3">
 
               <button type="submit" class="btn btn-primary mb-3">Sign Up</button>
             </div>
+            
           </div>
 
 
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
 
+      var changePos;
+      var addVal;
+      var iid;
+      var email=2;
+      var countSkill=0;
 
     $(document).ready(function(){
+
       $("#btn-1").click(function(){
+        console.log($('input[name="flexRadioDefault"]:checked').val());
+        console.log($('input[name="flexRadioDefault1"]:checked').val());
         $("#part-1").hide();
         $("#part-2").show();
       });
@@ -197,6 +274,16 @@
         $("#part-3").show();
       });
       $("#btn-3").click(function(){
+        console.log($("#exampleFormControlInput4").val());
+        Email.send({
+            Host : "smtp-mail.outlook.com",
+            Username : "umairahmeds@hotmail.com",
+            Password : "lahore",
+            To : $("#exampleFormControlInput4").val(),
+            From : "umairahmeds@hotmail.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"}).then( message => alert(message));
+
         $("#part-3").hide();
         $("#part-4").show();
       });
@@ -204,64 +291,115 @@
         $("#part-4").hide();
         $("#part-5").show();
       });
-      let Tog=true;
-      $("#htm").click(function(){
-        console.log("hello");
-        if(Tog==true)
+
+      changePos= function (clicked_id)
         {
-          $("#htm").appendTo("#selected");
-          Tog=false;
-        }
-        else
-        {
-          $("#htm").appendTo("#set");
-          Tog=true;
+          $("#skillShowHide").show();
+          $("#myUL").hide();
+
+          if($('#'+clicked_id).is('.btn-outline-primary'))
+          {
+          $('#'+clicked_id).appendTo("#selected").addClass('btn-outline-danger').removeClass('btn-outline-primary');
+          
+          countSkill++;
+
+          }
+          else
+          {
+            $('#'+clicked_id).appendTo("#set").addClass('btn-outline-primary').removeClass('btn-outline-danger');
+            countSkill--
+
+          }
+          if(countSkill>=2)
+          {
+            $("#btn-3").prop('disabled',false);
+          }
+          else
+          {
+            $("#btn-3").prop('disabled',true);
+          }
+
         }
 
-      });
+      //});
       $("#customRange").click(function(){
         $("#sliderStatus").html( $("#customRange").val() );
       });
+      $("#customRange1").click(function(){
+        $("#sliderStatus1").html( $("#customRange1").val() );
+      });
+   
+      
+      addVal= function (clicked_id)
+        {
+          iid=clicked_id;
 
+         
+        }
+        $("#add").click(function(){
+          console.log($("#customRange").val());
+          $('#'+iid+'d').html( $("#customRange").val() );
+          
+        });
+        $("#add-email").click(function(){
+          $("#email-"+email).show();
+          email++;
+          if(email==4)
+          {
+            $("#add-email").hide();
+          }
 
-      // $(".btn").click(function(){
-      //         $("#myModal").modal('show').modal('focus');
+        });
 
-      //         console.log("chal raha");
-      //     });
+        $("#flexRadioDefault1").click(function(){
+          $("#criteria").show();
+        });
+        $("#flexRadioDefault2").click(function(){
+          $("#criteria").show();
+        });
+        $("#flexRadioDefault3").click(function(){
+          $("#criteria").hide();
+        });
+
+        $("#btn-rec").click(function(){
+          $("#recommendations").show();
+
+        });
+        
+        $("#search").keyup(function(){
+          $("#skillShowHide").hide();
+          $("#myUL").show();
+
+                        var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById('search');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName('li');
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < li.length; i++) {
+                  a = li[i].getElementsByTagName("a")[0];
+                  txtValue = a.textContent || a.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                  } else {
+                    li[i].style.display = "none";
+                  }
+                }
+
+        });
+
+     
+$('.modal').on('shown.bs.modal', function() {
+  console.log("chal raha");
+  $("#myInput").focus();
+});
 
 
     });
 
 
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    -->
     </div>
   </body>
 </html>
