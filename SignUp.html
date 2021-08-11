@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Online Job</title>
     <style>
         .top-50
         {
@@ -18,22 +18,35 @@
         {
           left: 33% !important;
         }
+        body{
+          background-image: url('back.jpg');
+          margin: 100px;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+        }
+        .mt-4 {
+    margin-top: 2rem!important;
+}
+        
     </style>
   </head>
   <body>
-      <div class="container">
-    <h1>Hello, world!</h1>
-    <h2>hello</h2>
+    <div class="container" >
+    
+    
 
-    <div class="positon-relative">
+    <div class="position-relative" >
 
+      
         <div class="form position-absolute top-25 start-50" style="width:550px ;;border-radius: 10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
+          
             <!--Part1-->
-            <div id="part-1" style="padding:30px">
-              <h4>Are you?</h4>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="internee">
+            <div id="part-1" style="background-color:white; padding:30px">
+              <h6 class="text-center">Let's Start!</h6>
+              <h5 class="text-center">Are you?</h5>
+            <div class="form-check ">
+                <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="internee">
                 <label class="form-check-label" for="flexRadioDefault">
                   Internee
                 </label>
@@ -53,16 +66,27 @@
               <br>
               <div id="criteria" style="display: none;">
               <div class="mb-3">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                <select id="xyz" class="form-select  rounded-pill" aria-label="Default select example">
+                  <option value="1" selected>Select University</option>
+                  <option value="University of the Punjab">University of the Punjab</option>
+                  <option value="University of Engineering and Technology">University of Engineering and Technology</option>
+                  <option value="University of Central Punjab">University of Central Punjab</option>
+                  <option value="University of Lahore">University of Lahore</option>
+                  <option value="Government College University">Government College University</option>
+                  <option value="COMSATS">COMSATS</option>
                 </select>
   
               </div>
               <div class="mb-3">
-                <input class="form-control" type="file" name="" id="">
+                <p  id="uni" style="color: red;">Couldn't find your university?</p>
+
+              </div>
+              <div class="mb-3">
+                <input class="form-control" type="text" name="" id="inp" style="display:none ;">
+
+              </div>
+              <div class="mb-3">
+                <input class="form-control  rounded-pill" type="file" name="" id="">
   
               </div>
               </div>
@@ -88,63 +112,111 @@
                 </div>
 
                 
-              <button id="btn-1" type="button" class="btn btn-primary" style="margin-top: 30px;">Primary</button>
+              <button id="btn-1" type="button" class="btn btn-primary rounded-pill " disabled style="margin-top: 30px;">Next</button>
               </div>
 
-              <!--part2-->
-     <div id="part-2" style="padding:30px;display: none;">
+            
+ <!--- Roles ----
+  <div id="part-2" style="background-color:white; padding:30px;display: none;">
       <p>Let's set your minimum technical profile in two more simple questions</p>
       <h4>Which roles fit you?</h4>
       <div class="" role="group" aria-label="Basic checkbox toggle button group">
-        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck1" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1<span id="btncheck1d"></span></label>
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check mt-2" id="btncheck1" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck1">System Admin<span id="btncheck1d"></span></label>
 
         <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck2" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2<span id="btncheck2d"></span></label>
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck2">Security<span id="btncheck2d"></span></label>
 
         <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck3" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3<span id="btncheck3d"></span></label>
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck3">Search<span id="btncheck3d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck4" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck4">Big Data<span id="btncheck4d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck5" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck5">Blockchain<span id="btncheck5d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck6" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary  mt-2 rounded-pill" for="btncheck6">Chief Officer Level<span id="btncheck6d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck7" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck7">Backend<span id="btncheck7d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck8" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck8">Frontend<span id="btncheck8d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck9" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck9">QA<span id="btncheck9d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck10" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck10">Mobile<span id="btncheck10d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck11" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck11">Full Stack<span id="btncheck11d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck12" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck12">Gaming<span id="btncheck12d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck13" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck13">Machine Learning<span id="btncheck13d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck14" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck14">Database Admin<span id="btncheck14d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck15" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck15">Search<span id="btncheck15d"></span></label>
+      
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck16" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck16">Manager/PO<span id="btncheck16d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck17" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck17">Business Intelligent<span id="btncheck17d"></span></label>
+
+        <input type="checkbox" onclick="addVal(this.id)" class="btn-check" id="btncheck18" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <label class="btn btn-outline-primary mt-2 rounded-pill" for="btncheck18">Project Manager<span id="btncheck18d"></span></label>
       </div>
-      <button id="btn-2" type="button" class="btn btn-primary" style="margin-top: 30px;">Primary</button>
-
-
-
+      <button id="btn-2" type="button" class="btn btn-primary  rounded-pill" disabled style="margin-top: 30px;">Next</button>
       
 
-        <!-- Modal -->
+
+
+      ----------- Modal -------------
+
+       
+      
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="exampleModalLabel">How much experience do you have?</h5>
+                <button type="button" class="btn-close rounded-pill" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <label for="customRange1" class="form-label">Example range</label>
-
-                <div id="slider_count">Slider Value = <span id="sliderStatus">0</span></div>
+                
+                <div id="slider_count">Experience = <span id="sliderStatus"></span></div>
                   <br/>
-                <input type="range" class="form-range" min="10000" max="100000" step="10000" id="customRange">
+                <input type="range" class="form-range" min="0" max="10" step="1" id="customRange">
               </div>
               <div class="modal-footer">
 
-                <button id="add" type="button" class="btn btn-primary" data-bs-dismiss="modal">Add</button>
+                <button id="add" type="button" class="btn btn-primary rounded-pill" data-bs-dismiss="modal">Add Experience</button>
               </div>
             </div>
           </div>
         </div>
 
-      </div>
+      </div> ----->
 
 
                  <!--part3-->
-              <div id="part-3" style="padding:30px;display: none;">
-                <p>What are your top skills?</p>
-                <h4>From 2 to 10</h4>
+              <div id="part-3" style="background-color:white;  padding:30px;display: none;">
+                
+                <h5>What are your top skills?</h5>
+                <p style="color:#6c757d">From 2 to 10</p>
 
                 <div id="skillShowHide">
 
-                <div id="selected">
+                <div class="me-2" id="selected">
 
                 </div>
 
@@ -158,92 +230,157 @@
                     <label class="btn btn-outline-primary" for="btncheckaa">Checkbox 1</label>
                   </div>
 
-                  tesing-->
+                  tesing--> 
 
-
-                  <button id="html" name="hehe" type="checkbox" onclick="changePos(this.id)" class="btn btn-outline-primary">HTML</button>
-                  <button id="css" type="checkbox" onclick="changePos(this.id)" class="btn btn-outline-primary">CSS</button>
-                  <button id="C" type="checkbox" onclick="changePos(this.id)" class="btn btn-outline-primary">C++</button>
+                  <h6>Sugguested Skills</h6>
+                  <button id="html" name="hehe" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">HTML <span id="htmld"></span></button>
+                  <button id="css" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">CSS <span id="cssd"></span></button>
+                  <button id="cpp" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">C++ <span id="cppd"></span></button>
+                  <button id="java" name="hehe" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">Java <span id="javad"></span></button>
+                  <button id="c" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">C <span id="cd"></span></button>
+                  <button id="chash" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">C# <span id="chashd"></span></button>
+                  <button id="php" name="hehe" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">PHP <span id="phpd"></span></button>
+                  <button id="dotnet" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">.NET <span id="dotnetd"></span></button>
+                  <button id="python" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">Python <span id="pythond"></span></button>
+                  <button id="nodejs" name="hehe" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">Node.JS <span id="nodejsd"></span></button>
+                  <button id="linux" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill">Linux <span id="linuxd"></span></button>
+                  <button id="ruby" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">Ruby <span id="rubyd"></span></button>
+                  <button id="mysql" name="hehe" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">MySQL <span id="mysqld"></span></button>
+                  <button id="sql" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">SQL <span id="sqld"></span></button>
+                  <button id="mongodb" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">MongoDB <span id="mongodbd"></span></button>
+                  <button id="postgresql" name="hehe" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">PostgreSQL <span id="postgresqld"></span></button>
+                  <button id="j2ee" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">J2EE <span id="j2eed"></span></button>
+                  <button id="rest" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">REST <span id="restd"></span></button>
+                  <button id="go" name="hehe" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">Go <span id="god"></span></button>
+                  <button id="xml" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">XML <span id="xmld"></span></button>
+                  <button id="swarch" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">Software Architecture <span id="swarchd"></span></button>
+                  
+                  
                 </div>
                 </div>
-
-
+<!--- Modal ---->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">How much experience do you have?</h5>
+                        <button type="button" class="btn-close rounded-pill" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        
+                        <div id="slider_count">Experience = <span id="sliderStatus"></span></div>
+                          <br/>
+                        <input type="range" class="form-range" min="0" max="10" step="1" id="customRange">
+                      </div>
+                      <div class="modal-footer">
+        
+                        <button id="add" type="button" class="btn btn-primary mb-3 rounded-pill" data-bs-dismiss="modal">Add Experience</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
                 
         
 
-             <div id="recommendations" style="display: none;"> 
-            <div class="mb-3">
+             
+            <br> 
+            <input id="search" class="form-control me-2 mb-3 rounded-pill " type="search" placeholder="Search" aria-label="Search">
+            <ul id="myUL" style="display: none;">
+              <li id="22" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addVal(this.id); changePos1(this.id)" class="btn btn-outline-primary mt-2 rounded-pill me-2"><a  type="checkbox"  >R<span id="22d"></span></a></li>
+              <li id="23" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addVal(this.id); changePos1(this.id)" class="btn btn-outline-primary mt-2 rounded-pill me-2"><a  type="checkbox"  >blockchain <span id="23d"></span></a></li>
+              <li id="24" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addVal(this.id); changePos1(this.id)" class="btn btn-outline-primary mt-2 rounded-pill me-2"><a  type="checkbox"  >data science <span id="24d"></span></a></li>
+              <li id="25" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addVal(this.id); changePos1(this.id)" class="btn btn-outline-primary mt-2 rounded-pill me-2"><a  type="checkbox"  >Analyst <span id="25d"></span></a></li>
+            </ul>
+            <div id="no-skill" style="display: none;">
+              <P id="skill-name" style="color: crimson;">
+              </P>
+              <a href="">Add it as new skill?</a>
+              <p>Please check did you enter the name correct</p>
+            </div>   
+            <br>
+            <button id="btn-3b" type="button" class="btn btn-primary mb-3 rounded-pill" style="margin-top: 30px;" >Back</button>
+                <button id="btn-3" type="button" class="btn btn-primary mb-3 rounded-pill" style="margin-top: 30px;" disabled>Next</button>
+
+
+
+
+
+        </div>
+
+        <!-- part 4-->
+
+        <div id="part-4" style="background-color:white; padding:30px;display: none;">
+          <div id="skilset">
+            
+          </div>
+          <hr>
+          <div id="recommendations" > 
+            <div class="mb-3 row g-3">
+              <div class="col-auto">
               <label for="exampleFormControlInput4" class="form-label">Enter Email address for recommendations</label>
               <input type="email" class="form-control" id="exampleFormControlInput4" placeholder="name@example.com">
+            </div>
+            <div class=" col-auto">
+              <button id="" type="button" class="btn btn-primary mt-4 rounded-pill"  >Add</button>
+              <button id="" class="btn btn-outline-primary mt-4 rounded-pill">Edit</button>
+            </div>
+              <div id="emailbody1"></div>
               
             </div>
 
             <div class="mb-3" id="email-2" style="display: none;">
-              <label for="exampleFormControlInput5" class="form-label">Enter 2nd Email address for recommendations</label>
+              <label for="exampleFormControlInput5" class="form-label">Enter another Email address for recommendations</label>
               <input type="email" class="form-control" id="exampleFormControlInput5" placeholder="name@example.com">
-              
+              <div id="emailbody2"></div>
             </div>
             <div class="mb-3" id="email-3" style="display: none;">
-              <label for="exampleFormControlInput6" class="form-label">Enter 2nd Email address for recommendations</label>
+              <label for="exampleFormControlInput6" class="form-label">Enter another Email address for recommendations</label>
               <input type="email" class="form-control" id="exampleFormControlInput6" placeholder="name@example.com">
-              
+              <div id="emailbody3"></div>
             </div>
-            <button id="add-email" >Add</button>
+            <button id="add-email" class="btn btn-outline-primary rounded-pill">Add Email</button>
             </div>
-            <br>
-            <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <ul id="myUL" style="display: none;">
-              <li id="r" onclick="changePos(this.id)"><a  type="checkbox" onclick="changePos(this.id)" class="btn btn-outline-primary">R</a></li>
-              <li><a href="#">Agnes</a></li>
-            
-              <li><a href="#">Billy</a></li>
-              <li><a href="#">Bob</a></li>
-            
-              <li><a href="#">Calvin</a></li>
-              <li><a href="#">Christina</a></li>
-              <li><a href="#">Cindy</a></li>
-            </ul>   
-            <br>
-                <button id="btn-3" type="button" class="btn btn-primary" style="margin-top: 30px;" disabled>Primary</button>
-                <button id="btn-rec" type="button" class="btn btn-primary" style="margin-top: 30px;">Ask for Recommendations</button>
-
-
-
-
-
-        </div>
-        <!--part 4-->
-        <div id="part-4" style="padding:30px;display: none;">
-          <p>Let's set your minimum technical profile in two more simple questions</p>
-          <h4>Which roles fit you?</h4>
-          <label for="customRange1" class="form-label">Example range</label>
-
-          <div id="slider_count">Slider Value = <span id="sliderStatus1">0</span></div>
+            <button id="btn-4b" type="button" class="btn btn-primary mb-3 mt-3 rounded-pill"  >Back</button>
+            <button id="btn-4" class="btn btn-outline-primary mb-3 mt-3 rounded-pill">Next</button>
+          </div>
+          
+        
+        <!--part 5-->
+        <div id="part-5" style="background-color:white; padding:30px;display: none;">
+          <p>Tell us what a job should offer to make you happy</p>
+          <h4>How much do you want to earn?</h4>
+          <br>
+          <div id="slider_count">Salary = <span id="sliderStatus1"></span></div>
             <br/>
           <input type="range" class="form-range" min="10000" max="100000" step="10000" id="customRange1">
-          <button id="btn-4" type="button" class="btn btn-primary" style="margin-top: 30px;">Primary</button>
+          <button id="btn-5b" type="button" class="btn btn-primary rounded-pill" style="margin-top: 30px;" >Back</button>
+          <button id="btn-5" type="button" class="btn btn-primary  rounded-pill" style="margin-top: 30px;">Select Salary</button>
         </div>
 
-          <!--part 5-->
-          <div id="part-5" style="padding:30px;display: none;">
-            <p>Last Step :)</p>
-            <h4>you will be anonymous for companies</h4>
+          <!--part 6-->
+          <div id="part-6" style="background-color:white; padding: 30px ; display: none;">
+            <h6 class="text-center">Last Step:)</h6>
+            <h4 class="text-center">You will be anonymous for companies</h4>
+            <br>
+            <br>
             <div class="mb-3">
               <label for="exampleFormControlInput0" class="form-label">Name</label>
-              <input type="text" class="form-control" id="exampleFormControlInput0" placeholder="Your Name">
+              <input type="text" class="form-control rounded-pill" id="exampleFormControlInput0" placeholder="Your Full Name">
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              <input type="email" class="form-control rounded-pill" id="exampleFormControlInput1" placeholder="Type your email address">
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput2" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleFormControlInput2">
+              <input type="password" class="form-control rounded-pill" id="exampleFormControlInput2">
             </div>
            
             <div class="mb-3">
 
-              <button type="submit" class="btn btn-primary mb-3">Sign Up</button>
+              <button id="btn-6b" type="button" class="btn btn-primary mb-3 rounded-pill" style="margin-top: 30px;" >Back</button>
+              <button type="submit" class="btn btn-primary mb-3  rounded-pill">Sign Up</button>
             </div>
             
           </div>
@@ -251,155 +388,11 @@
 
 
     </div>
+    </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-
-      var changePos;
-      var addVal;
-      var iid;
-      var email=2;
-      var countSkill=0;
-
-    $(document).ready(function(){
-
-      $("#btn-1").click(function(){
-        console.log($('input[name="flexRadioDefault"]:checked').val());
-        console.log($('input[name="flexRadioDefault1"]:checked').val());
-        $("#part-1").hide();
-        $("#part-2").show();
-      });
-      $("#btn-2").click(function(){
-        $("#part-2").hide();
-        $("#part-3").show();
-      });
-      $("#btn-3").click(function(){
-        console.log($("#exampleFormControlInput4").val());
-        Email.send({
-            Host : "smtp-mail.outlook.com",
-            Username : "umairahmeds@hotmail.com",
-            Password : "lahore",
-            To : $("#exampleFormControlInput4").val(),
-            From : "umairahmeds@hotmail.com",
-            Subject : "This is the subject",
-            Body : "And this is the body"}).then( message => alert(message));
-
-        $("#part-3").hide();
-        $("#part-4").show();
-      });
-      $("#btn-4").click(function(){
-        $("#part-4").hide();
-        $("#part-5").show();
-      });
-
-      changePos= function (clicked_id)
-        {
-          $("#skillShowHide").show();
-          $("#myUL").hide();
-
-          if($('#'+clicked_id).is('.btn-outline-primary'))
-          {
-          $('#'+clicked_id).appendTo("#selected").addClass('btn-outline-danger').removeClass('btn-outline-primary');
-          
-          countSkill++;
-
-          }
-          else
-          {
-            $('#'+clicked_id).appendTo("#set").addClass('btn-outline-primary').removeClass('btn-outline-danger');
-            countSkill--
-
-          }
-          if(countSkill>=2)
-          {
-            $("#btn-3").prop('disabled',false);
-          }
-          else
-          {
-            $("#btn-3").prop('disabled',true);
-          }
-
-        }
-
-      //});
-      $("#customRange").click(function(){
-        $("#sliderStatus").html( $("#customRange").val() );
-      });
-      $("#customRange1").click(function(){
-        $("#sliderStatus1").html( $("#customRange1").val() );
-      });
-   
-      
-      addVal= function (clicked_id)
-        {
-          iid=clicked_id;
-
-         
-        }
-        $("#add").click(function(){
-          console.log($("#customRange").val());
-          $('#'+iid+'d').html( $("#customRange").val() );
-          
-        });
-        $("#add-email").click(function(){
-          $("#email-"+email).show();
-          email++;
-          if(email==4)
-          {
-            $("#add-email").hide();
-          }
-
-        });
-
-        $("#flexRadioDefault1").click(function(){
-          $("#criteria").show();
-        });
-        $("#flexRadioDefault2").click(function(){
-          $("#criteria").show();
-        });
-        $("#flexRadioDefault3").click(function(){
-          $("#criteria").hide();
-        });
-
-        $("#btn-rec").click(function(){
-          $("#recommendations").show();
-
-        });
-        
-        $("#search").keyup(function(){
-          $("#skillShowHide").hide();
-          $("#myUL").show();
-
-                        var input, filter, ul, li, a, i, txtValue;
-                input = document.getElementById('search');
-                filter = input.value.toUpperCase();
-                ul = document.getElementById("myUL");
-                li = ul.getElementsByTagName('li');
-
-                // Loop through all list items, and hide those who don't match the search query
-                for (i = 0; i < li.length; i++) {
-                  a = li[i].getElementsByTagName("a")[0];
-                  txtValue = a.textContent || a.innerText;
-                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                  } else {
-                    li[i].style.display = "none";
-                  }
-                }
-
-        });
-
-     
-$('.modal').on('shown.bs.modal', function() {
-  console.log("chal raha");
-  $("#myInput").focus();
-});
-
-
-    });
-
-
-    </script>
-    </div>
+    <script type="text/javascript" src="jquery.js"></script>
+    
   </body>
 </html>
