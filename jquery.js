@@ -9,6 +9,7 @@
       var countSkill=0;
       var arr=[];
       var addd=1;
+      var boolAddEdit =true;
         
     $(document).ready(function(){
 
@@ -37,7 +38,7 @@
         console.log(clicked_id);
 
 
-        if($('#'+clicked_id).is('.btn-outline-danger'))
+        if($('#'+clicked_id).is('.btn-outline-danger')&& boolAddEdit==true)
         {
             console.log("changepos3")
         $('#'+clicked_id).appendTo("#emailbody"+addd).addClass('btn-outline-success').removeClass('btn-outline-danger');
@@ -79,9 +80,9 @@
         $("#emailbody2").html("");
         $("#emailbody3").html("");
         addd=1;
-        email--;
+        email=3;
         $("#email-"+email).hide();
-          email--;
+          email=2;
         $("#email-"+email).hide();
         $("#add-email").show();
         
@@ -98,7 +99,14 @@
       $("#btn-4").click(function(){
         $("#part-4").hide();
         $("#part-5").show();
+        $("#customRange1").val("10000");
+        $("#sliderStatus1").html( $("#customRange1").val() );
         console.log($("#exampleFormControlInput4").val());
+        var skillList=""
+        for (i = 1; i <= $("#emailbody1").children().length; i++) {
+          skillList +=  $("#emailbody1").children(".btn-outline-success:nth-child("+ i +")").html();
+          // Do stuff...
+      }
         Email.send({
             Host : "smtp-mail.outlook.com",
             Username : "umairahmeds@hotmail.com",
@@ -106,7 +114,9 @@
             To : $("#exampleFormControlInput4").val(),
             From : "umairahmeds@hotmail.com",
             Subject : "This is the subject",
-            Body : "And this is the body"}).then( message => alert(message));
+            Body : "And this is the body" + skillList
+          }).then( message => alert(message));
+          console.log(skillList);
       });
       $("#btn-5").click(function(){
         $("#part-5").hide();
@@ -187,6 +197,8 @@
       
       addVal= function (clicked_id)
         {
+          $("#customRange").val("0");
+          $("#sliderStatus").html( $("#customRange").val() );
           iid=clicked_id;
 
          
@@ -294,7 +306,52 @@ $('#flexRadioDefault3').click(function(){
     $("#btn-1").prop('disabled',false);
   
 });
-    });
+    
+
+//this is added code 8/12/2021 3:24 AM
+$("#email-btn-1").click(function(){
+
+  $("#exampleFormControlInput4").attr('readonly',true).addClass('form-control-plaintext').removeClass('form-control');
+  $("#emailbody1").children(".btn-outline-success").attr('disabled',true);
+  boolAddEdit=false;
+
+});
+$("#email-btn-1-edit").click(function(){
+
+  $("#exampleFormControlInput4").attr('readonly',false).addClass('form-control').removeClass('form-control-plaintext');
+  $("#emailbody1").children(".btn-outline-success").attr('disabled',false);
+  boolAddEdit=true;
+});
+
+$("#email-btn-2").click(function(){
+
+  $("#exampleFormControlInput5").attr('readonly',true).addClass('form-control-plaintext').removeClass('form-control');
+  $("#emailbody2").children(".btn-outline-success").attr('disabled',true);
+  boolAddEdit=false;
+
+});
+$("#email-btn-2-edit").click(function(){
+
+  $("#exampleFormControlInput5").attr('readonly',false).addClass('form-control').removeClass('form-control-plaintext');
+  $("#emailbody2").children(".btn-outline-success").attr('disabled',false);
+  boolAddEdit=true;
+});
+
+$("#email-btn-3").click(function(){
+
+  $("#exampleFormControlInput6").attr('readonly',true).addClass('form-control-plaintext').removeClass('form-control');
+  $("#emailbody3").children(".btn-outline-success").attr('disabled',true);
+  boolAddEdit=false;
+
+});
+$("#email-btn-3-edit").click(function(){
+
+  $("#exampleFormControlInput6").attr('readonly',false).addClass('form-control').removeClass('form-control-plaintext');
+  $("#emailbody3").children(".btn-outline-success").attr('disabled',false);
+  boolAddEdit=true;
+});
+
+});
 
 
     
