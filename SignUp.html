@@ -16,7 +16,7 @@
         }
         .start-50
         {
-          left: 33% !important;
+          left: 29% !important;
         }
         body{
           background-image: url('back.jpg');
@@ -42,6 +42,7 @@
         <div class="form position-absolute top-25 start-50" style="width:550px ;;border-radius: 10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
           
             <!--Part1-->
+           
             <div id="part-1" style="background-color:white; padding:30px">
               <h6 class="text-center">Let's Start!</h6>
               <h5 class="text-center">Are you?</h5>
@@ -86,7 +87,10 @@
 
               </div>
               <div class="mb-3">
-                <input class="form-control  rounded-pill" type="file" name="" id="">
+                <label for="myfile">Upload Your Transcript </label>
+                <br><br>
+                <input class="form-control  rounded-pill" type="file" id="myfile" name="myfile">
+                
   
               </div>
               </div>
@@ -243,7 +247,7 @@
                   <button id="dotnet" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">.NET <span id="dotnetd"></span></button>
                   <button id="python" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">Python <span id="pythond"></span></button>
                   <button id="nodejs" name="hehe" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">Node.JS <span id="nodejsd"></span></button>
-                  <button id="linux" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill">Linux <span id="linuxd"></span></button>
+                  <button id="linux" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">Linux <span id="linuxd"></span></button>
                   <button id="ruby" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">Ruby <span id="rubyd"></span></button>
                   <button id="mysql" name="hehe" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">MySQL <span id="mysqld"></span></button>
                   <button id="sql" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">SQL <span id="sqld"></span></button>
@@ -287,10 +291,13 @@
             <br> 
             <input id="search" class="form-control me-2 mb-3 rounded-pill " type="search" placeholder="Search" aria-label="Search">
             <ul id="myUL" style="display: none;">
-              <li id="22" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addVal(this.id); changePos1(this.id)" class="btn btn-outline-primary mt-2 rounded-pill me-2"><a  type="checkbox"  >R<span id="22d"></span></a></li>
-              <li id="23" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addVal(this.id); changePos1(this.id)" class="btn btn-outline-primary mt-2 rounded-pill me-2"><a  type="checkbox"  >blockchain <span id="23d"></span></a></li>
-              <li id="24" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addVal(this.id); changePos1(this.id)" class="btn btn-outline-primary mt-2 rounded-pill me-2"><a  type="checkbox"  >data science <span id="24d"></span></a></li>
-              <li id="25" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addVal(this.id); changePos1(this.id)" class="btn btn-outline-primary mt-2 rounded-pill me-2"><a  type="checkbox"  >Analyst <span id="25d"></span></a></li>
+              <button id="22" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addVal(this.id); changePos1(this.id)" class="btn btn-outline-primary mt-2 rounded-pill me-2">R<span id="22d"></span></button>
+              <button id="23" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addVal(this.id); changePos1(this.id)" class="btn btn-outline-primary mt-2 rounded-pill me-2">blockchain <span id="23d"></span></button>
+              <button id="24" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addVal(this.id); changePos1(this.id)" class="btn btn-outline-primary mt-2 rounded-pill me-2">data science <span id="24d"></span></button>
+              <button id="25" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addVal(this.id); changePos1(this.id)" class="btn btn-outline-primary mt-2 rounded-pill me-2">Analyst <span id="25d"></span></button>
+              <!--we havt implement all of this like the below code then there will be no error-->
+              <button id="test" type="checkbox" onclick="addVal(this.id); changePos1(this.id)" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-primary mt-2 rounded-pill me-2">Software Architecture <span id="swarchd"></span></button>
+                  
             </ul>
             <div id="no-skill" style="display: none;">
               <P id="skill-name" style="color: crimson;">
@@ -398,7 +405,7 @@
             <div class="mb-3">
 
               <button id="btn-6b" type="button" class="btn btn-primary mb-3 rounded-pill" style="margin-top: 30px;" >Back</button>
-              <button type="submit" class="btn btn-primary mb-3  rounded-pill">Sign Up</button>
+              <button type="submit" class="btn btn-primary mt-3  rounded-pill">Sign Up</button>
             </div>
             
           </div>

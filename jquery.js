@@ -191,7 +191,7 @@
         $("#sliderStatus").html( $("#customRange").val() );
       });
       $("#customRange1").click(function(){
-        $("#sliderStatus1").html( $("#customRange1").val() );
+        $("#sliderStatus1").html($("#customRange1").val() );
       });
    
       
@@ -209,13 +209,14 @@
           console.log(iid);
           arr.push(iid);
           console.log(arr[0]);
-          $('#'+iid+'d').html( $("#customRange").val() );
+          $('#'+iid+'d').html("("+ $("#customRange").val()+")" );
           $("#btn-2").prop('disabled',false);
           
         });
         $("#add-email").click(function(){
             addd++;
           console.log("xyz");
+          boolAddEdit=true;
           $("#email-"+email).show();
           email++;
           if(email==4)
@@ -249,12 +250,12 @@
                 input = document.getElementById('search');
                 filter = input.value.toUpperCase();
                 ul = document.getElementById("myUL");
-                li = ul.getElementsByTagName('li');
+                li = ul.getElementsByTagName('button');
 
                 // Loop through all list items, and hide those who don't match the search query
                 for (i = 0; i < li.length; i++) {
-                  a = li[i].getElementsByTagName("a")[0];
-                  txtValue = a.textContent || a.innerText;
+                  //a = li[i].getElementsByTagName("a")[0];
+                  txtValue = li[i].textContent || li[i].innerText;
                   if (txtValue.toUpperCase().indexOf(filter) > -1) {
                     li[i].style.display = "";
                   } else {
